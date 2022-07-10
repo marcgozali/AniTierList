@@ -9,19 +9,7 @@ function Sidebar() {
                     href='#' 
                     target="_blank" 
                     rel="noreferrer">
-                    Sword Art Online
-                </a>
-                <a 
-                    href='#' 
-                    target="_blank" 
-                    rel="noreferrer">
-                    Attack On Titan
-                </a>
-                <a 
-                    href='#' 
-                    target="_blank" 
-                    rel="noreferrer">
-                    BatChest
+                    Placeholder
                 </a>
             </nav>
         </aside>
