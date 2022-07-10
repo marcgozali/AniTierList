@@ -1,7 +1,9 @@
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { useState, useEffect } from 'react';
+
 function App() {
 	const [ animeList, SetAnimeList ] = useState([]);
 	const [ topAnime, SetTopAnime ] = useState([]);
@@ -64,7 +66,7 @@ function App() {
 		var variables = {
 			userId: q,
 			page: 1,
-			perPage: 50
+			perPage: 10
 		};
 		
 		var url = 'https://graphql.anilist.co',
