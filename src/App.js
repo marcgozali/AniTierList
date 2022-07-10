@@ -7,27 +7,81 @@ function App() {
 	const [ topAnime, SetTopAnime ] = useState([]);
 	const [ search, SetSearch ] = useState("");
 
-	const GetUserlist = async () => {
-		const settings = {
-			method: 'GET',
-			headers: {
-				"Access-Control-Allow-Origin": "*",
-				"Access-Control-Allow-Methods": "GET",
-				"Access-Control-Allow-Headers": "Origin, Methods, Content-Type",
-				'X-MAL-CLIENT-ID': ''
+	const GetTopAnime = async () => {
+		
+	}
+
+	function handleResponse(response) {
+		return response.json().then(function (json) {
+			return response.ok ? json : Promise.reject(json);
+		});
+	}
+	
+	function handleData(data) {
+		console.log("data");
+		console.log(data);
+	}
+	
+	function handleError(error) {
+		alert('Error, check console');
+		console.error(error);
+	}
+
+	const HandleSearch = e => {
+		e.preventDefault();
+		FetchAnime(search);
+		//console.log(search)
+	}
+
+	const FetchAnime = async (q) => {
+		var query = `
+		query ($userId: String, $page: Int, $perPage: Int) {
+			Page(page: $page, perPage: $perPage) {
+			  mediaList(userName: $userId, type: ANIME) {
+				media {
+				  title {
+					romaji
+					english
+				  }
+				  coverImage {
+					large
+				  }
+				}
+			  }
 			}
-		}
-		const temp = await fetch(
-			`https://api.myanimelist.net/v2/users/Arcanis33/animelist`, settings)
-			.then( res => res.json());
-		console.log(temp);
-		SetTopAnime(temp);
+		  }
+		`;
+
+		var variables = {
+			userId: q,
+			page: 1,
+			perPage: 10
+		};
+		
+		var url = 'https://graphql.anilist.co',
+			options = {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json',
+				},
+				body: JSON.stringify({
+					query: query,
+					variables: variables
+				})
+			};
+		
+		const temp = await fetch(url, options)
+			.then(handleResponse)
+			.then(handleData)
+			.catch(handleError);
+			
+		SetAnimeList(temp);
 	}
 
 	useEffect(() => {
-		GetUserlist();
-		console.log("topAnime");
-		console.log(topAnime);
+		GetTopAnime();
+		//console.log("topAnime");
 	}, [])
 
 	return (
@@ -36,7 +90,11 @@ function App() {
 			<div className="content-wrap">
 				<Sidebar 
 					topAnime={topAnime} />
-				<MainContent />
+				<MainContent 
+					HandleSearch={HandleSearch}
+					search={search}
+					SetSearch={SetSearch}
+					animeList={animeList} />
 			</div>
 		</div>
 	);
