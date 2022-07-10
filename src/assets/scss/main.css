@@ -144,7 +144,7 @@ header h1 strong {
 
 .content-wrap main .anime-list .anime-card {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33.333%;
+    /*  -ms-flex: 1 1 33.333%; */
           flex: 1 1 33.333%;
   max-width: 33.333%;
   padding: 16px 8px;

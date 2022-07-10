@@ -19,7 +19,8 @@ function App() {
 	
 	function handleData(data) {
 		console.log("data");
-		console.log(data);
+		console.log(data.data.Page.mediaList);
+		SetAnimeList(data.data.Page.mediaList);
 	}
 	
 	function handleError(error) {
@@ -30,14 +31,21 @@ function App() {
 	const HandleSearch = e => {
 		e.preventDefault();
 		FetchAnime(search);
-		//console.log(search)
 	}
 
 	const FetchAnime = async (q) => {
 		var query = `
 		query ($userId: String, $page: Int, $perPage: Int) {
 			Page(page: $page, perPage: $perPage) {
+				pageInfo {
+					total
+					currentPage
+					lastPage
+					hasNextPage
+					perPage
+				}
 			  mediaList(userName: $userId, type: ANIME) {
+				id
 				media {
 				  title {
 					romaji
@@ -50,12 +58,13 @@ function App() {
 			  }
 			}
 		  }
+		  
 		`;
 
 		var variables = {
 			userId: q,
 			page: 1,
-			perPage: 10
+			perPage: 50
 		};
 		
 		var url = 'https://graphql.anilist.co',
@@ -71,12 +80,10 @@ function App() {
 				})
 			};
 		
-		const temp = await fetch(url, options)
+		await fetch(url, options)
 			.then(handleResponse)
 			.then(handleData)
 			.catch(handleError);
-			
-		SetAnimeList(temp);
 	}
 
 	useEffect(() => {

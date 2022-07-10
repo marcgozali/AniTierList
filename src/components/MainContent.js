@@ -17,7 +17,11 @@ function MainContent(props) {
 				</form>
 			</div>
 			<div className='anime-list'>
-
+				{props.animeList.map(anime => (
+					<AnimeCard 
+						anime={anime}
+						key={anime.id} />
+				))}
 			</div>
 		</main>
 	)

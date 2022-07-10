@@ -1,15 +1,15 @@
 import React from 'react'
 
-function AnimeCard() {
+function AnimeCard({anime}) {
   return (
     <article className='anime-card'>
-        <a href=''>
+        <a href="">
             <figure>
                 <img 
-                    src=""
+                    src={anime.media.coverImage.large}
                     alt="Anime Image" />
             </figure>
-            <h3></h3>
+            <h3>{ anime.media.title.romaji }</h3>
         </a>
     </article>
   )
