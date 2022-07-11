@@ -169,6 +169,8 @@ header h1 strong {
 
 .content-wrap main .anime-list .anime-card h3 {
   color: #313131;
+  text-align: center;
+  font-size: small;
 }
 
 .content-wrap main .anime-list .anime-card:hover figure img {

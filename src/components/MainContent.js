@@ -40,19 +40,7 @@ function MainContent(props) {
 						<div className='anime-list' {...provided.droppableProps} ref={provided.innerRef}>
 							{animes.map((anime, index) => {
 								return (
-									<Draggable key={anime.media.title.romaji} draggableId={anime.media.title.romaji} index={index}>
-										{(provided) => (
-											<article className='anime-card' {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-												<figure>
-													<img
-														src={anime.media.coverImage.large}
-														alt="Anime Image" />
-												</figure>
-												<h3>{anime.media.title.romaji}</h3>
-											</article>
-										)}
-
-									</Draggable>
+									<AnimeCard anime={anime} index={index}></AnimeCard>
 								)
 							})}
 							{provided.placeholder}

@@ -1,20 +1,19 @@
 import React from 'react'
 import { Draggable, DragDropContext, Droppable } from 'react-beautiful-dnd'
 
-function AnimeCard({ anime },{ index }) {
+function AnimeCard(props) {
 	return (
-		<Draggable key={anime.media.title.romaji} draggableId={anime.media.title.romaji} index={index}>
+		<Draggable key={props.anime.media.title.romaji} draggableId={props.anime.media.title.romaji} index={props.index}>
 			{(provided) => (
 				<article className='anime-card' {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
 					<figure>
 						<img
-							src={anime.media.coverImage.large}
+							src={props.anime.media.coverImage.large}
 							alt="Anime Image" />
 					</figure>
-					<h3>{anime.media.title.romaji}</h3>
+					<h3>{props.anime.media.title.romaji}</h3>
 				</article>
 			)}
-
 		</Draggable>
 	)
 }

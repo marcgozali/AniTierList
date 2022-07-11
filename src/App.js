@@ -64,7 +64,7 @@ function App() {
 		var variables = {
 			userId: q,
 			page: 1,
-			perPage: 50
+			perPage: 10
 		};
 		
 		var url = 'https://graphql.anilist.co',
