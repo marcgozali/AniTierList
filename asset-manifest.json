@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AniTierList/static/css/main.7aae5ddb.css",
+    "main.js": "/AniTierList/static/js/main.5a4217b4.js",
+    "index.html": "/AniTierList/index.html",
+    "main.7aae5ddb.css.map": "/AniTierList/static/css/main.7aae5ddb.css.map",
+    "main.5a4217b4.js.map": "/AniTierList/static/js/main.5a4217b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7aae5ddb.css",
+    "static/js/main.5a4217b4.js"
+  ]
+}
