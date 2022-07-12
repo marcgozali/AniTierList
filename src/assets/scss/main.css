@@ -219,11 +219,12 @@ header h1 strong {
 .content-wrap main .anime-list {
   display: -webkit-box;
   display: -ms-flexbox;
-  width:100%;
+  width:100vw;
   margin-top: 32px;
   margin: 0px -8px 0px;
   display:flex;
   padding-left:10px;
+  
 
 }
 .containerS{
@@ -253,7 +254,16 @@ header h1 strong {
   display:flex;
   /* margin:0; */
 }
-
+.containerAnilist .anime-list{
+  max-width:100vw;
+  overflow-x:scroll;
+  overflow-y:hidden;
+  
+}
+.containerAnilist{
+  padding-bottom:50px;
+  
+}
 
 
 .content-wrap .anime-list .anime-card {
