@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/AniTierList/static/css/main.7aae5ddb.css",
-    "main.js": "/AniTierList/static/js/main.5a4217b4.js",
+    "main.css": "/AniTierList/static/css/main.22ab41cb.css",
+    "main.js": "/AniTierList/static/js/main.6ccb06be.js",
     "index.html": "/AniTierList/index.html",
-    "main.7aae5ddb.css.map": "/AniTierList/static/css/main.7aae5ddb.css.map",
-    "main.5a4217b4.js.map": "/AniTierList/static/js/main.5a4217b4.js.map"
+    "main.22ab41cb.css.map": "/AniTierList/static/css/main.22ab41cb.css.map",
+    "main.6ccb06be.js.map": "/AniTierList/static/js/main.6ccb06be.js.map"
   },
   "entrypoints": [
-    "static/css/main.7aae5ddb.css",
-    "static/js/main.5a4217b4.js"
+    "static/css/main.22ab41cb.css",
+    "static/js/main.6ccb06be.js"
   ]
 }
