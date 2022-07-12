@@ -1,10 +1,9 @@
 {
   "name": "anitier",
   "version": "0.1.0",
-  "homepage": "http://marcgozali.github.io/AniTierList",
+  "homepage": "https://marcgozali.github.io/AniTierList",
   "private": true,
   "dependencies": {
-    "gh-pages": "^4.0.0",
     "react": "^17.0.0",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^17.0.0",
@@ -35,5 +34,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
