@@ -96,7 +96,7 @@ function MainContent(props) {
 					return (
 						<Droppable droppableId={columnId} key={columnId} direction="horizontal">
 							{(provided) => ([
-								<div class = "container">
+								<div class = {"container" + columnId}>
 								<aside>
 									<h3 id ='test'>{columnId}</h3>
 								</aside>

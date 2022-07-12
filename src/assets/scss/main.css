@@ -28,7 +28,27 @@ header h1 strong {
   display: flex;
 }
 
-.content-wrap aside {
+.content-wrap .containerS aside {
+  /* -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: rgb(245, 238, 149);
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
+}
+.content-wrap .containerA aside {
   /* -webkit-box-flex: 1;
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
@@ -42,6 +62,86 @@ header h1 strong {
   
   display: flex;
   background-color: rgb(255,127,127);
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
+}
+.content-wrap .containerB aside {
+  /* -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: rgb(255,191,127);
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
+}
+.content-wrap .containerC aside {
+  /* -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: rgb(255,223,127);
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
+}
+.content-wrap .containerD aside {
+  /* -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: #FFFF7F;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
+}
+.content-wrap .containerF aside {
+  /* -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: rgb(191,255,127);
   align-items: center;
   justify-content: center;
   border: solid 1px #000;
@@ -126,14 +226,35 @@ header h1 strong {
   padding-left:10px;
 
 }
-.container{
+.containerS{
   display:flex;
   /* margin:0; */
-  
-  
-  
- 
 }
+.containerA{
+  display:flex;
+  /* margin:0; */
+}
+
+.containerB{
+  display:flex;
+  /* margin:0; */
+}
+
+.containerC{
+  display:flex;
+  /* margin:0; */
+}
+.containerD{
+  display:flex;
+  /* margin:0; */
+}
+
+.containerF{
+  display:flex;
+  /* margin:0; */
+}
+
+
 
 .content-wrap .anime-list .anime-card {
   -webkit-box-flex: 1;
