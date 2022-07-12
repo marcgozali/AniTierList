@@ -29,41 +29,24 @@ header h1 strong {
 }
 
 .content-wrap aside {
-  -webkit-box-flex: 1;
+  /* -webkit-box-flex: 1;
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
-  max-width: 250px;
-  padding-right: 16px;
-}
-
-.content-wrap aside nav {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-.content-wrap aside nav h3 {
-  color: #313131;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-
-.content-wrap aside nav a {
-  display: block;
-  padding: 8px 16px;
-  text-align: left;
-  color: #888;
-  font-size: 16px;
-  margin-bottom: 16px;
-  background-color: #EEE;
-  border-radius: 999px;
-  text-decoration: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.content-wrap aside nav a:hover {
-  background-color: #313131;
-  color: #AAA;
+  max-width: 50px;
+  padding-right: 16px; */
+  width:100px;
+  min-height:100px;
+  
+  
+  
+  
+  display: flex;
+  background-color: rgb(255,127,127);
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #000;
+ 
+  
 }
 
 .content-wrap main {
@@ -71,6 +54,7 @@ header h1 strong {
       -ms-flex: 1 1 0%;
           flex: 1 1 0%;
   padding: 0px 16px;
+  
 }
 
 .content-wrap main .main-head {
@@ -135,15 +119,32 @@ header h1 strong {
 .content-wrap main .anime-list {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  width:100%;
   margin-top: 32px;
-  margin: 32px -8px 0px;
+  margin: 0px -8px 0px;
+  display:flex;
+  padding-left:10px;
+
+}
+.container{
+  display:flex;
+  /* margin:0; */
+  
+  
+  
+ 
 }
 
 .content-wrap .anime-list .anime-card {
   -webkit-box-flex: 1;
   width: 100px;
-  padding: 16px 8px;
+  margin: 3px;
+  
+  
+
+  
+  
+  /* padding: 16px 8px; */
 }
 
 .content-wrap main .anime-list .anime-card a {
@@ -152,7 +153,7 @@ header h1 strong {
 
 .content-wrap main .anime-list .anime-card figure {
   display: block;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .content-wrap main .anime-list .anime-card figure img {
@@ -162,6 +163,7 @@ header h1 strong {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 16px;
+  border: solid 1px #000;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
   -webkit-transition: 0.4s;
@@ -179,5 +181,30 @@ header h1 strong {
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */

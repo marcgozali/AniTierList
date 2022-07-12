@@ -50,23 +50,23 @@ function MainContent(props) {
 				items: []
 			},
 			A: {
-				name: "a-tier",
+				name: "A-tier",
 				items: []
 			},
 			B: {
-				name: "b-tier",
+				name: "B-tier",
 				items: []
 			},
 			C: {
-				name: "b-tier",
+				name: "C-tier",
 				items: []
 			},
 			D: {
-				name: "b-tier",
+				name: "D-tier",
 				items: []
 			},
 			F: {
-				name: "b-tier",
+				name: "F-tier",
 				items: []
 			},
 			Anilist: {
@@ -96,9 +96,10 @@ function MainContent(props) {
 					return (
 						<Droppable droppableId={columnId} key={columnId} direction="horizontal">
 							{(provided) => ([
-								<div className='label'>
-									<h3>{columnId}</h3>
-								</div>,
+								<div class = "container">
+								<aside>
+									<h3 id ='test'>{columnId}</h3>
+								</aside>
 								<div className='anime-list' {...provided.droppableProps} ref={provided.innerRef}>
 									{column.items.map((anime, index) => {
 										return (
@@ -106,6 +107,7 @@ function MainContent(props) {
 										)
 									})}
 									{provided.placeholder}
+								</div>
 								</div>
 							])}
 						</Droppable>

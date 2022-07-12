@@ -93,7 +93,6 @@ function App() {
 		<div className="App">
 			<Header />
 			<div className="content-wrap">
-				<Sidebar />
 				<MainContent 
 					HandleSearch={HandleSearch}
 					search={search}
