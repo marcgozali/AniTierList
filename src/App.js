@@ -4,8 +4,9 @@ import MainContent from './components/MainContent';
 import { useState, useEffect } from 'react';
 function App() {
 	const [ animeList, SetAnimeList ] = useState([]);
-	const [ topAnime, SetTopAnime ] = useState([]);
+	//const [ topAnime, SetTopAnime ] = useState([]);
 	const [ search, SetSearch ] = useState("");
+	//const [ numpages, setNumPages ] = useState(0);
 
 	const GetTopAnime = async () => {
 		
@@ -33,7 +34,7 @@ function App() {
 		FetchAnime(search);
 	}
 
-	const FetchAnime = async (q) => {
+	const FetchAnime = async (username) => {
 		var query = `
 		query ($userId: String, $page: Int, $perPage: Int) {
 			Page(page: $page, perPage: $perPage) {
@@ -58,13 +59,12 @@ function App() {
 			  }
 			}
 		  }
-		  
 		`;
 
 		var variables = {
-			userId: q,
+			userId: username,
 			page: 1,
-			perPage: 10
+			perPage: 50
 		};
 		
 		var url = 'https://graphql.anilist.co',
@@ -87,16 +87,13 @@ function App() {
 	}
 
 	useEffect(() => {
-		GetTopAnime();
-		//console.log("topAnime");
 	}, [])
 
 	return (
 		<div className="App">
 			<Header />
 			<div className="content-wrap">
-				<Sidebar 
-					topAnime={topAnime} />
+				<Sidebar />
 				<MainContent 
 					HandleSearch={HandleSearch}
 					search={search}
