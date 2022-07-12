@@ -140,8 +140,9 @@ header h1 strong {
   margin: 32px -8px 0px;
 }
 
-.content-wrap main .anime-list .anime-card {
+.content-wrap .anime-list .anime-card {
   -webkit-box-flex: 1;
+  width: 100px;
   padding: 16px 8px;
 }
 
