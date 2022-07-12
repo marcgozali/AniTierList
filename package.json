@@ -1,7 +1,7 @@
 {
   "name": "anitier",
   "version": "0.1.0",
-  "homepage": "https://marcgozali.github.io/AniTierList/",
+  "homepage": "http://marcgozali.github.io/AniTierList",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
